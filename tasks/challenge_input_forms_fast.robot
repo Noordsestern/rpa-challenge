@@ -3,8 +3,8 @@ Library    DataDriver    file=challenge_input_forms.xlsx
 Library    RPA.Browser
 Resource    ../resources/challenge.resource
 Resource    ../resources/environment.resource
-Suite Setup    Run Setup Only Once    Start Challenge 'Input Forms'
-Suite Teardown    Run Teardown Only Once    Finish Challenge
+Suite Setup    Start Challenge 'Input Forms'
+Suite Teardown    Finish Challenge
 Variables    ../variables/challenge_input_forms_pom.yaml
 Test Template    Fill in input fields
 
