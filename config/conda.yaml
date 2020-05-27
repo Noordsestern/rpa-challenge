@@ -6,7 +6,8 @@ dependencies:
   - pip=20.1
   - pip:
     - rpa-framework==0.10.*
-    - pyyaml==5.3.*
+    - pyyaml
     - robotframework-datadriver==0.3.*
     - pandas
     - numpy
+    - robotframework-pabot

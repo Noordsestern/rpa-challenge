@@ -18,5 +18,5 @@ activities:
         - output
         - --logtitle
         - Task log
-        - ./tasks/*.robot
+        - ./tasks/c*.robot
 condaConfig: config/conda.yaml

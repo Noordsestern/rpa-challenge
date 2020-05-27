@@ -10,3 +10,5 @@ temp/
 *.pyc
 *.zip
 *.log
+challenge.xlsx
+.pabotsuitenames

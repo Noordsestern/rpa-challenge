@@ -1,22 +1,22 @@
 input_form:
   lastname:
     value:  "Last Name"
-    xpath: "xpath://input[@ng-reflect-name='labelLastName']"
+    xpath: "//input[@ng-reflect-name='labelLastName']"
   firstname:
     value: "First Name"
-    xpath: "xpath://input[@ng-reflect-name='labelFirstName']"
+    xpath: "//input[@ng-reflect-name='labelFirstName']"
   companyname:
     value: "Company Name"
-    xpath: "xpath://input[@ng-reflect-name='labelCompanyName']"
+    xpath: "//input[@ng-reflect-name='labelCompanyName']"
   role:
     value: "Role in Company"
-    xpath: "xpath://input[@ng-reflect-name='labelRole']"
+    xpath: "//input[@ng-reflect-name='labelRole']"
   email:
     value: "Email"
-    xpath: "xpath://input[@ng-reflect-name='labelEmail']"
+    xpath: "//input[@ng-reflect-name='labelEmail']"
   address:
     value: "Address"
-    xpath: "xpath://input[@ng-reflect-name='labelAddress']"
+    xpath: "//input[@ng-reflect-name='labelAddress']"
   phone:
     value: "Phone Number"
-    xpath: "xpath://input[@ng-reflect-name='labelPhone']"
+    xpath: "//input[@ng-reflect-name='labelPhone']"

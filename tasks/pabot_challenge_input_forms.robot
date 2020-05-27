@@ -1,7 +1,8 @@
 *** Settings ***
 Library    DataDriver    .xlsx
-Library    RPA.Browser
-Resource    ../resources/challenge.resource
+Library    pabot.SharedLibrary    RPA.Browser
+Library    pabot.PabotLib
+Resource    ../resources/challenge_pabot.resource
 Resource    ../resources/environment.resource
 Suite Setup    Run Setup Only Once    Start Challenge 'Input Forms'
 Suite Teardown    Run Teardown Only Once    Finish Challenge
@@ -10,7 +11,7 @@ Test Template    Fill in input fields
 
 
 *** Tasks ***
-Fill in forms ${First Name} ${Last Name}
+Fill in forms
 
 *** Keywords ***
 Fill in input fields
@@ -24,7 +25,12 @@ Fill in input fields
 Fill in "${field}"
     ${field_props}    Set Variable    ${input_form.${field}}
     ${value}    Get variable value    ${${field_props.value}}
-    input text when element is visible    xpath:${field_props.xpath}    ${value}
+    # input text when element is visible    xpath:${field_props.xpath}    ${value}
+    Fill in field really fast   ${field_props.xpath}    ${value}
+
+Finish Challenge
+    Capture Page Screenshot    result.png
+    [Teardown]    Close Browser
 
 Fill in field really fast
     [Arguments]    ${xpath}    ${value}
